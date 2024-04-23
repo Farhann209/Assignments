@@ -19,8 +19,11 @@ const wholeNum = Math.floor(randomNum)
 console.log(wholeNum)
 
 if (wholeNum<3){
-console.log("Number is less than 3")
+console.log("Number is less than 3.")
+}
+else if(wholeNum === 3){
+    console.log("Number is equal to 3.")
 }
 else{
-    console.log("Number is 3 or greater.")
+    console.log("Number is greater than 3.")
 }
