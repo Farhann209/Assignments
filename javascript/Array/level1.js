@@ -14,5 +14,4 @@ console.log(arrr.reverse())
 
 ///Q3 join the array and console log
 // expected output 352
-const a = (arr.join(""))
-const jointArray = Number("a")
+console.log(arr.join(""))
