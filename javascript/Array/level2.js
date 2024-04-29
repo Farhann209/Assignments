@@ -13,12 +13,15 @@ console.log(removeArr)
 
 //Q3 Multiply each element of the array by a constant value 5 and log the modified array to the console.
 //expected output [15,10]
-arr.splice(1,1)
-const multipliedArr = arr.map((item)=>{
+const newArr = [...arr]
+newArr.splice(1, 1)
+console.log(newArr.map((item)=>{
     return item * 5
-})
-console.log(multipliedArr)
+}))
 
 //find intersection (common elements) of arr and arr2
 //expected output: [5]
 const arr2 = [5,21,32]
+
+const commonArr = arr.filter(common => arr2.includes(common))
+console.log(commonArr)
