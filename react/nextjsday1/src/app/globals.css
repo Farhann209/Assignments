@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.greeting{
+  background-color: brown;
+  margin: 20px;
+  margin-left: 5px;
+  padding: 10px;
+}
+
+.button{
+  color: whitesmoke;
+  background-color: black;
+  padding: 10px;
+  margin: auto;
+}
+
+.Form{
+  color: aliceblue;
+  background: skyblue;
+  padding: 30px;
+  margin: 20px;
+  width: 400px;
+  align-tracks: center;
+}
