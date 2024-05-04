@@ -16,7 +16,7 @@ const Login = () => {
       </Button>
       <br/>
       <br/>
-      Don't have an account yet? <Link href="/register" className="text-blue-400 underline">Sign Up Now.</Link>
+      Don't have an account yet? <Link href="/register" className="text-blue-400">Sign Up Now.</Link>
       </div>
       </div>
     </div>
