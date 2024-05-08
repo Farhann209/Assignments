@@ -7,18 +7,18 @@ import * as Yup from 'yup';
 
 const SignupSchema = Yup.object().shape({
   userName: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
+    .min(3, <span style={{ color: 'red' }}>Too Short!</span>)
+    .max(50, <span style={{ color: 'red' }}>Too Long!</span>)
+    .required(<span style={{ color: 'red' }}>*Required!</span>),
   address: Yup.string()
-    .min(2, 'Too Short!')
-    .max(50, 'Too Long!')
-    .required('Required'),
-  email: Yup.string().email('Invalid email').required('Required'),
+  .min(7, <span style={{ color: 'red' }}>Too Short!</span>)
+  .max(50, <span style={{ color: 'red' }}>Too Long!</span>)
+  .required(<span style={{ color: 'red' }}>*Required!</span>),
+  email: Yup.string().email(<span style={{ color: 'red' }}>Invalid Email!</span>).required(<span style={{ color: 'red' }}>*Required!</span>),
   password: Yup.string()
-  .min(7, 'Too Short!')
-  .max(50, 'Too Long!')
-  .required('Required')
+  .min(7, <span style={{ color: 'red' }}>Too Short!</span>)
+  .max(50, <span style={{ color: 'red' }}>Too Long!</span>)
+  .required(<span style={{ color: 'red' }}>*Required!</span>)
 });
 
 const Register = () => {
