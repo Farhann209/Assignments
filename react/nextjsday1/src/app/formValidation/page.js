@@ -1,5 +1,5 @@
 'use client'
-import React from 'react';
+import React, {useRef} from 'react';
 import { useFormik } from 'formik';
 import {Input} from "@nextui-org/react";
 import * as Yup from 'yup';
@@ -21,6 +21,7 @@ import * as Yup from 'yup';
  });
 
 const SignupForm = () => {
+  const inputRef = useRef(null)
   const formik = useFormik({
     initialValues: {
       firstName: '',
@@ -35,35 +36,52 @@ const SignupForm = () => {
   });
 
   return (
-    <form onSubmit={formik.handleSubmit}>
+    <form onSubmit={formik.handleSubmit} className='w-56'>
       <label htmlFor="firstName">First Name</label>
+      
       <Input 
+      isClearable
+      ref = {inputRef}
       id= "firstName"
       name="firstName"
       label="firstName" 
       placeholder="Enter your firstName"
       onChange={formik.handleChange}
-      value={formik.values.firstName} />
+      value={formik.values.firstName}
+      onClear={()=> {
+        formik.setFieldValue('firstName', '')
+      }} />
       {formik.errors.firstName}
 
       <Input 
+      isClearable
+      ref = {inputRef}
       id= "lastName"
       name="lastName"
       label="lastName" 
       placeholder="Enter your lastName"
       onChange={formik.handleChange}
-      value={formik.values.lastName} />
+      value={formik.values.lastName} 
+      onClear={()=> {
+        formik.setFieldValue('lastName', '')
+      }}
+      />
       {formik.errors.lastName}
 
       <Input 
+      isClearable
+      ref = {inputRef}
       id= "email"
       name="email"
       type="email" 
       label="Email" 
       placeholder="Enter your email"
       onChange={formik.handleChange}
-      value={formik.values.email} />
-      
+      value={formik.values.email} 
+      onClear={()=> {
+        formik.setFieldValue('email', '')
+      }}
+      />
       {formik.errors.email}
 
       <Input 
